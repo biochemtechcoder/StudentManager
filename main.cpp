@@ -1,32 +1,5 @@
-#include <iostream>
-#include <vector>
-#include <string>
+#include "Student.h"
 
-struct Student {
-    std::string ism;
-    std::string familiya;
-    int tyil;
-    int kurs;
-
-    Student(std::string ism_, std::string familiya_, int tyil_) : ism(ism_), familiya(familiya_), tyil(tyil_), kurs(1) {}
-
-    void tanishtir() const{
-        std::cout << "Mening ismim " << ism << " familiyam " << familiya << ". Men " << kurs <<" kurs talabasi man." << std::endl;
-    }
-
-    int yosh(int yil) const {
-        return yil - tyil;
-    }
-
-    void bosqich() {
-        kurs++;
-    }
-
-    bool katta(int yil) const {
-        return yil - tyil >=18;
-    }
-
-};
 
 int main() {
     std::vector<Student> students;
